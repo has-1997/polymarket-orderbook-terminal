@@ -43,3 +43,9 @@ export type PriceHistoryPoint = {
   time: number;
   value: number;
 };
+
+// The response shape returned by /api/markets/[slug]/prices.
+export type MarketPricesResponse = {
+  prices: MarketPrices;
+  orderBook: OrderBook;
+};
