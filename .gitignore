@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 product/
+# Keep real environment files private, but allow the safe template
+!.env.example
