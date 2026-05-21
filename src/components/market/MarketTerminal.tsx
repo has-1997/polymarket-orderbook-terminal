@@ -5,6 +5,7 @@ import { OrderBookTable } from "@/components/market/OrderBookTable";
 import { OutcomeSelector } from "@/components/market/OutcomeSelector";
 import { PriceCards } from "@/components/market/PriceCards";
 import { PriceHistoryChart } from "@/components/market/PriceHistoryChart";
+import { TradeSizeCalculator } from "@/components/market/TradeSizeCalculator";
 import type {
   MarketPrices,
   MarketPricesResponse,
@@ -148,6 +149,8 @@ export function MarketTerminal({ market }: MarketTerminalProps) {
       ) : null}
 
       <PriceHistoryChart history={history} isLoading={isLoadingHistory} />
+
+      <TradeSizeCalculator asks={orderBook?.asks ?? []} />
 
       <OrderBookTable
         bids={orderBook?.bids ?? []}
